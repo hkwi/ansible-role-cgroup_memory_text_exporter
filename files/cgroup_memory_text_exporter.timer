@@ -1,0 +1,9 @@
+[Unit]
+Description=cgroup memory text node_exporter dumper timer
+
+[Timer]
+OnCalendar=minutely
+Persistent=true
+
+[Install]
+WantedBy=timers.target

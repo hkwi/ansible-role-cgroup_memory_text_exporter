@@ -1,0 +1,6 @@
+[Unit]
+Description=cgroup memory text node_exporter dumper service
+
+[Service]
+ExecStart=/usr/local/bin/cgroup_memory_text_exporter.py {{ node_exporter_textfile_dir | default("/var/lib/node_exporter") }}/cgroup_memory.prom
+Type=oneshot
